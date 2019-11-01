@@ -24,15 +24,25 @@ In this challenge, create a web API around the following resources: `Projects` a
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your Team Lead.
 
-- [ ] Mention two parts of Express that you learned about this week.
+ Mention two parts of Express that you learned about this week.
+ 
+ First off, I learned that Express is backend framework. Express has request handlers that takes request and response in its parameter and sends the client a correct response depending on the request.
 
-- [ ] Describe Middleware?
+ Describe Middleware?
+ 
+ Middleware, like in React, is an essential way to check that requirements have been fulfilled before carrying out a task. It doesn't necessarily have to serve this purpose, but it can. For instance, if a user wants to pull up information that requires credentials, middleware can intercept the request and deny or grant access based on the fulfillment.
 
-- [ ] Describe a Resource?
+ Describe a Resource?
+ 
+A resource is information inside a database. The backend is designed to distribute these resources via request handlers to users requesting it. 
 
-- [ ] What can the API return to help clients know if a request was successful?
+ What can the API return to help clients know if a request was successful?
+ 
+ The API can return an object that was directly called. Especially for calls POST, DELETE, UPDATE, sending the object that was selected back to the client let's them know that the request was successful.
 
-- [ ] How can we partition our application into sub-applications?
+ How can we partition our application into sub-applications?
+ 
+ It relies on the kind of resources being worked with. Resources are tied to the database design (tables). For a website like Reddit, there are posts, subreddits, and users among many other things. Breaking these three resources down into sub-applications is key to organization and efficiency.
 
 ## Project Setup
 
