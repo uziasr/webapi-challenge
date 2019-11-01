@@ -13,6 +13,16 @@ router.get('/projects', (req,res)=>{
     })
 })
 
+router.get('/projects/:id/actions', (req,res)=>{
+    const id = req.params.id
+    projectDB.getProjectActions(id)
+    .then(actions=>res.status(200).json(actions))
+    .catch(err=>{
+        console.log(err)
+        res.status(500).json({error: 'something went terribly wrong!'})
+    })
+})
+
 router.post('/projects', (req,res)=>{
     const newProject = req.body 
     projectDB.insert(newProject)
