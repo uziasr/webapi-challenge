@@ -1,14 +1,17 @@
-/*
-play this: https://www.youtube.com/watch?v=d-diB65scQU
+const express = require('express');
+const server = express();
+// const projectRouter = require('./projects/projectRouter.js')
 
-Sing along:
+server.use(express.json)
 
-here's a little code I wrote, you might want to read it really slow, don't worry be happy
-in every line there may be trouble, but if you worry you make it double, don't worry, be happy
-ain't got no sense of what is REST? just concentrate on learning Express, don't worry, be happy
-your file is getting way too big, bring a Router and make it thin, don't worry, be crafty
-there is no data on that route, just write some code, you'll sort it out… don't worry, just API…
-I need this code, just don't know where, perhaps should make some middleware, don't worry, be happy
+server.get('', (req, res) => {
+    console.log('hello')
+    res.send(`<h2>Let's write some middleware!</h2>`)
+  });
+// server.use('/',projectRouter)
 
-Go code!
-*/
+
+const port = 9000
+server.listen(port, ()=>{
+    console.log('You are now listening on port: ', port)
+});
